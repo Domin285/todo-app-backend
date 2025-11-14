@@ -13,4 +13,5 @@ _export const environment = { apiUrl: "https://localhost:7040" };_
 
 **Uruchomienie frontendu:**
 - ng serve
+  
 Aplikacja uruchomi się pod _http://localhost:4200_
