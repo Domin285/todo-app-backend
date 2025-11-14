@@ -51,6 +51,7 @@ _Pamiętaj, aby uruchomić backend, zanim uruchomisz frontend_
 - PUT	/api/todo/{id}	Aktualizuje istniejące zadanie
 
 **Schemat modeli**
+
 TodoItem:
 - Id
 - Title 
