@@ -1,17 +1,24 @@
 **Wymagane narzędzia:**
-- Angular CLI	20.3.10
-- Node.js	20.19.5
-- npm	10.2.5
-- OS	Windows 10/11
+- NET SDK	8.0.100
+- PostgreSQL	16.10
+- EF Core Tools	dotnet-ef
+- Microsoft.EntityFrameworkCore	8.0.8
+- Microsoft.EntityFrameworkCore.Design	8.0.8
+- Microsoft.EntityFrameworkCore.Tools	8.0.6
+- Npgsql.EntityFrameworkCore.PostgreSQL	8.0.4
 
-**Instalacja zależności:**
-- npm install
-  
-**Konfiguracja API URL:**
-W pliku _frontend/src/environments/environment.ts_ ustaw adres backendu, np.
-_export const environment = { apiUrl: "https://localhost:7040" };_
+**Konfiguracja bazy danych PostgreSQL:**
+Utwórz bazę danych:
+- _CREATE DATABASE todo_db;_
 
-**Uruchomienie frontendu:**
-- ng serve
+W pliku _backend/appsettings.json_ uzupełnij connection string:
+- _"ConnectionStrings": { "DefaultConnection": "Host=localhost;Port=5432;Database=todo_db;Username=postgres;Password=YOUR_PASSWORD" }_
   
-Aplikacja uruchomi się pod _http://localhost:4200_
+**Migracje bazy danych:**
+Wejdź do katalogu backendu i zrób aktualizację bazy:
+- _dotnet ef database update_
+
+**Uruchomienie backendu:**
+- _dotnet run_
+  
+_Pamiętaj, aby uruchomić backend, zanim uruchomisz frontend_
